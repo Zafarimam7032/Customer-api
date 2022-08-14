@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "db2d20cd-7f1e-4489-af24-98486c285da9",
+		"name": "product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"productName\": \"shirt\",\n  \"productId\": \"D1\",\n  \"createdOn\": \"2022-08-13\",\n  \"productInfo\": \"watches\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/customer/product/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"customer",
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/customer/product/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"customer",
+						"product",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product by product id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/customer/product/get/C1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"customer",
+						"product",
+						"get",
+						"C1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assign product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/customer/product/assign/productid/B1/customerid/123abc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"customer",
+						"product",
+						"assign",
+						"productid",
+						"B1",
+						"customerid",
+						"123abc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productName\": \"pant\",\n  \"createdOn\": \"2023-08-13\",\n  \"productInfo\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/customer/product/update/productid/A1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"customer",
+						"product",
+						"update",
+						"productid",
+						"A1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product to customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/customer/update/product/customerid/imam123/oldproductid/A1/newproductid/F1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"customer",
+						"update",
+						"product",
+						"customerid",
+						"imam123",
+						"oldproductid",
+						"A1",
+						"newproductid",
+						"F1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/customer/remove/product/customerid/imam123/productid/E1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"customer",
+						"remove",
+						"product",
+						"customerid",
+						"imam123",
+						"productid",
+						"E1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
